@@ -12,7 +12,7 @@ import butterknife.ButterKnife;
  * Created by vladi on 11/14/2016.
  */
 
-/*public class BaseActivity extends AppCompatActivity {
+public abstract class BaseActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -20,4 +20,4 @@ import butterknife.ButterKnife;
         ButterKnife.bind(this);
         App.getAppComponent().inject(this);
     }
-}*/
+}

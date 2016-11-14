@@ -2,6 +2,7 @@ package com.projectsetup.vlad.projectsetup;
 
 import android.content.Context;
 
+import com.projectsetup.vlad.projectsetup.ui.BaseActivity;
 import com.projectsetup.vlad.projectsetup.ui.MainActivity;
 import com.projectsetup.vlad.projectsetup.util.AppPreferences;
 
@@ -15,6 +16,8 @@ import dagger.Component;
 @Singleton
 @Component(modules = {NetworkModule.class, AppModule.class})
 public interface AppComponent {
+
+    void inject(BaseActivity baseActivity);
 
     void inject(MainActivity mainActivity);
 
