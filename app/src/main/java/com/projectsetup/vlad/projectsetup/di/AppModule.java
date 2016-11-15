@@ -1,4 +1,4 @@
-package com.projectsetup.vlad.projectsetup;
+package com.projectsetup.vlad.projectsetup.di;
 
 import android.content.Context;
 import android.content.SharedPreferences;

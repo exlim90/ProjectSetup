@@ -3,7 +3,7 @@ package com.projectsetup.vlad.projectsetup.util;
 import android.content.SharedPreferences;
 
 /**
- * Created by vladi on 11/13/2016.
+ * Created by Vladimir on 11/14/2016.
  */
 
 public class PreferenceManager implements AppPreferences {

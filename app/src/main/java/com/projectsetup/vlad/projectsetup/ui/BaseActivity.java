@@ -9,15 +9,18 @@ import com.projectsetup.vlad.projectsetup.R;
 import butterknife.ButterKnife;
 
 /**
- * Created by vladi on 11/14/2016.
+ * Created by Vladimir on 11/14/2016.
  */
 
 public abstract class BaseActivity extends AppCompatActivity {
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        ButterKnife.setDebug(true);
-        ButterKnife.bind(this);
-        App.getAppComponent().inject(this);
+        injectDaggerDependencies();
     }
+
+    protected abstract void injectDaggerDependencies();
+
+    protected abstract void injectUIDependencies();
 }

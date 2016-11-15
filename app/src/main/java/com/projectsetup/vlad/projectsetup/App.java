@@ -2,8 +2,14 @@ package com.projectsetup.vlad.projectsetup;
 
 import android.app.Application;
 
+import com.projectsetup.vlad.projectsetup.di.AppComponent;
+import com.projectsetup.vlad.projectsetup.di.AppModule;
+import com.projectsetup.vlad.projectsetup.di.DaggerAppComponent;
+import com.projectsetup.vlad.projectsetup.di.NetworkApi;
+import com.projectsetup.vlad.projectsetup.di.NetworkModule;
+
 /**
- * Created by vladi on 11/12/2016.
+ * Created by Vladimir on 11/14/2016.
  */
 
 public class App extends Application {

@@ -1,4 +1,4 @@
-package com.projectsetup.vlad.projectsetup;
+package com.projectsetup.vlad.projectsetup.di;
 
 import javax.inject.Singleton;
 
@@ -7,24 +7,24 @@ import dagger.Provides;
 import retrofit2.Retrofit;
 
 /**
- * Created by vladi on 11/12/2016.
+ * Created by Vladimir on 11/14/2016.
  */
 @Module
 public class NetworkModule {
 
     private String mBaseUrl;
 
-    public NetworkModule(String mBaseUrl) {
-        this.mBaseUrl = mBaseUrl;
-    }
-
-    @Provides
     @Singleton
+    @Provides
     Retrofit provideRetrofit() {
         Retrofit retrofit = new Retrofit.Builder()
                 .baseUrl(mBaseUrl)
                 .build();
         return retrofit;
+    }
+
+    public NetworkModule(String mBaseUrl) {
+        this.mBaseUrl = mBaseUrl;
     }
 
     @Provides

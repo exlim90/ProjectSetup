@@ -1,9 +1,9 @@
-package com.projectsetup.vlad.projectsetup;
+package com.projectsetup.vlad.projectsetup.di;
 
 import android.content.Context;
 
 import com.projectsetup.vlad.projectsetup.ui.BaseActivity;
-import com.projectsetup.vlad.projectsetup.ui.MainActivity;
+import com.projectsetup.vlad.projectsetup.ui.someView.MainActivity;
 import com.projectsetup.vlad.projectsetup.util.AppPreferences;
 
 import javax.inject.Singleton;
@@ -11,15 +11,11 @@ import javax.inject.Singleton;
 import dagger.Component;
 
 /**
- * Created by vladi on 11/12/2016.
+ * Created by Vladimir on 11/14/2016.
  */
 @Singleton
 @Component(modules = {NetworkModule.class, AppModule.class})
 public interface AppComponent {
-
-    void inject(BaseActivity baseActivity);
-
-    void inject(MainActivity mainActivity);
 
     NetworkApi getNetworkApi();
 
