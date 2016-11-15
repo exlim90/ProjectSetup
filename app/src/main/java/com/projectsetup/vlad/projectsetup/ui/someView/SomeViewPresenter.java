@@ -3,6 +3,8 @@ package com.projectsetup.vlad.projectsetup.ui.someView;
 import javax.inject.Inject;
 
 import rx.Subscription;
+import rx.android.schedulers.AndroidSchedulers;
+import rx.schedulers.Schedulers;
 import rx.subscriptions.CompositeSubscription;
 
 /**
@@ -57,7 +59,8 @@ public class SomeViewPresenter implements SomeViewContract.Presenter {
     }
 
     private void doSomething() {
-        Subscription subscription = emptyManager.getStrings().subscribe(view::showMessage);
+        Subscription subscription = emptyManager.getStrings().subscribeOn(Schedulers.newThread())
+                .observeOn(AndroidSchedulers.mainThread()).subscribe(view::showMessage);
         subscriptions.add(subscription);
     }
 }

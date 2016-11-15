@@ -2,6 +2,8 @@ package com.projectsetup.vlad.projectsetup.ui.someView;
 
 import com.projectsetup.vlad.projectsetup.di.NetworkApi;
 
+import java.util.concurrent.TimeUnit;
+
 import javax.inject.Inject;
 
 import rx.Observable;
@@ -21,6 +23,6 @@ public class EmptyManager {
 
 
     public Observable<String> getStrings() {
-        return Observable.just("Hi", "Hello", "Hey");
+        return Observable.just("Hi", "Hello", "Hey").flatMap(s -> Observable.just(s).delay(1, TimeUnit.SECONDS));
     }
 }
