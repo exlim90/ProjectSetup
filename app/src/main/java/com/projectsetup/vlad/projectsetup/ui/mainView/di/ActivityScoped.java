@@ -1,4 +1,4 @@
-package com.projectsetup.vlad.projectsetup.ui.someView.di;
+package com.projectsetup.vlad.projectsetup.ui.mainView.di;
 
 import java.lang.annotation.Documented;
 import java.lang.annotation.Retention;

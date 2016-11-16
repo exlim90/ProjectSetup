@@ -2,8 +2,6 @@ package com.projectsetup.vlad.projectsetup.di;
 
 import android.content.Context;
 
-import com.projectsetup.vlad.projectsetup.ui.BaseActivity;
-import com.projectsetup.vlad.projectsetup.ui.someView.MainActivity;
 import com.projectsetup.vlad.projectsetup.util.AppPreferences;
 
 import javax.inject.Singleton;
